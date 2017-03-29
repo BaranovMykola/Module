@@ -11,11 +11,6 @@ namespace Module
         public static double Foo(double x, double e)
         {
             double sum = x * x / 4;
-            //for (int k = 1; k < 2; k++)
-            //{
-            //    double modificator = (-1) * x * x / (4 * (k + 2) * (k + 2));
-            //    sum += sum * modificator;
-            //}
             double deltaSum = 0;
             int k = 1;
             do
@@ -37,7 +32,19 @@ namespace Module
         }
         static void Main(string[] args)
         {
-            Tabulation(0, 10, 0.9);
+            Tabulation(5, 7, 0.5);
+            Console.WriteLine();
+            var arr = Clock.ReadFromFile("Clocks.txt").ToArray<Clock>();
+            Clock.SortByName(arr);
+            foreach (var item in arr)
+            {
+                Console.WriteLine(item);
+            }
+            string brand = "Brand5";
+            Console.WriteLine("Total count of electronic clocks [{0}] is {1} (Battery is {2})", brand,
+                Clock.CountOfElectronicClocks(arr, brand, ElectonicClock.Battery.Standart), ElectonicClock.Battery.Standart);
+            Console.WriteLine();
+            Console.WriteLine("Clock with max warranty - {0}", Clock.MetTheMostWarranty(arr));
             Console.ReadKey();
         }
     }

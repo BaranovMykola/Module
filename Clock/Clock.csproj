@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{42B777D8-3AD1-4A41-8621-F258F5F9FF77}</ProjectGuid>
+    <ProjectGuid>{CB34A9CC-811E-443D-9B91-959E3C66FA9E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Module</RootNamespace>
-    <AssemblyName>Module</AssemblyName>
+    <RootNamespace>Clock</RootNamespace>
+    <AssemblyName>Clock</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,10 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clock.cs" />
-    <Compile Include="ElectonicClock.cs" />
-    <Compile Include="Inheritance.cs" />
-    <Compile Include="MechanicalClock.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
