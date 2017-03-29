@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Module
 {
-    class Program
+    class Inheritance
     {
         static void Main(string[] args)
         {
