@@ -7,5 +7,12 @@ Factory1
 Factory2
 	Vechile trade21 3 6 2 false
 	Truck trade23 1 2 8 978
-	Vechile trade22 3 5 2 true
+	Vechile trade22 3 5 2 false
+#
+Factory3
+	Vechile trade31 3 6 2 false
+	Truck trade33 3 5 8 98
+	Truck trade32 3 5 8 777
+	dsjkaldj
+	Truck rrr
 #
