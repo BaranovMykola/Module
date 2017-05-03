@@ -10,6 +10,12 @@ namespace CarFactory
     {
         static void Main(string[] args)
         {
+            var cfList = CarFactory.Read(new System.IO.StreamReader("../../CarFactories.txt"));
+            foreach (var item in cfList)
+            {
+                Console.WriteLine(item);
+            }
+            Console.ReadKey();
         }
     }
 }
