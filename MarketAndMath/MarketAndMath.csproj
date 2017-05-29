@@ -45,7 +45,7 @@
   <ItemGroup>
     <Compile Include="Market.cs" />
     <Compile Include="NumberArg.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="MarketAndMathProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

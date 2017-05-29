@@ -23,13 +23,13 @@ using System.Xml.Serialization;
 
 namespace MarketAndMath
 {
-    class Program
+    class MarketAndMathProgram
     {
 
         public static event EventHandler<EventArgs> OnNMultiplier;
         public static event EventHandler OnFullScreen; 
 
-        static Program()
+        static MarketAndMathProgram()
         {
             OnNMultiplier += ShowNumber;
             OnFullScreen += AskUser;
@@ -66,15 +66,13 @@ namespace MarketAndMath
 
             try
             {
-                TryAllNumbers(0, 2000000000, 0);
+                TryAllNumbers(0, 2000000000, 5);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 Console.WriteLine("Terminated...");
             }
-            
             Console.ReadKey();
-
         }
 
         public static int GetDividersCount(int element)
@@ -102,11 +100,11 @@ namespace MarketAndMath
                 if (GetDividersCount(i) == N)
                 {
                     ++count;
-                    OnNMultiplier.Invoke(null, new NumberArg(i));
+                    OnNMultiplier?.Invoke(null, new NumberArg(i));
                     if (count == 10)
                     {
                         count = 0;
-                        OnFullScreen.Invoke(null, EventArgs.Empty);
+                        OnFullScreen?.Invoke(null, EventArgs.Empty);
                     }
                 }
             }
@@ -116,7 +114,7 @@ namespace MarketAndMath
         public static void ShowNumber(object sender, EventArgs args)
         {
             var numb = args as NumberArg;
-            Console.WriteLine($"Found {numb.Number} number");
+            Console.WriteLine(value: $"Found {numb?.Number} number");
         }
 
         public static void AskUser(object sender, EventArgs args)
